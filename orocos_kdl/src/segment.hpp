@@ -152,6 +152,10 @@ namespace KDL {
             return joint.pose(0)*f_tip;
         }
 
+		  void setFrameToTip(const Frame& f) {
+			  f_tip = joint.pose(0).Inverse() * f;
+		  }
+
     };
 }//end of namespace KDL
 

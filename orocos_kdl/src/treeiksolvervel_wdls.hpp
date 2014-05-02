@@ -79,6 +79,10 @@ namespace KDL {
         void setLambda(const double& lambda);
         double getLambda () const {return lambda;}
 
+		  const MatrixXd& getJw() const {return Wy_J_Wq;}
+		  const MatrixXd& getU() const {return U;}
+		  const MatrixXd& getV() const {return V;}
+		  const VectorXd& getS() const {return S;}
     private:
         Tree tree;
         TreeJntToJacSolver jnttojacsolver;
