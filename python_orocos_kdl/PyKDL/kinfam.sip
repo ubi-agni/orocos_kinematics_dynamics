@@ -311,7 +311,7 @@ using namespace KDL;
 %End
     virtual int getError() const;
     virtual const char* strError(const int error) const;
-    virtual void updateInternalDataStructures() = 0;
+    virtual void updateInternalDataStructures() {}
 };
 
 class ChainFkSolverPos : SolverI
@@ -366,7 +366,6 @@ using namespace KDL;
 %End
 public:
     virtual int CartToJnt(const JntArray& q_init , const Frame& p_in, JntArray& q_out )=0;
-    virtual void updateInternalDataStructures()=0;
 };
 
 class ChainIkSolverVel : SolverI {
@@ -377,7 +376,6 @@ using namespace KDL;
 public:
     virtual int CartToJnt(const JntArray& q_in , const Twist& v_in , JntArray& qdot_out )=0;
     virtual int CartToJnt(const JntArray& q_init , const FrameVel& v_in , JntArrayVel& q_out )=0;
-    virtual void updateInternalDataStructures()=0;
 };
 
 class ChainIkSolverPos_NR : ChainIkSolverPos

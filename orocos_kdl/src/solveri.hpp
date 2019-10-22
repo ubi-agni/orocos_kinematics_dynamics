@@ -142,7 +142,7 @@ public:
 	 * of segments or number of joints of a chain/tree have changed.
 	 * This provides a single point of contact for solver memory allocations.
 	 */
-	virtual void updateInternalDataStructures() = 0;
+	virtual void updateInternalDataStructures() {}
 
 protected:
 	/// Latest error, initialized to E_NOERROR in constructor
